@@ -4,7 +4,7 @@
 > - 进度: P16 Done
 
 > - mosh大神的python从入门到精通
-> - 进度: P2 06:15
+> - 进度: P2 11:40
 
 > - [机器学习100天](https://github.com/MLEveryday/100-Days-Of-ML-Code?spm=a2c6h.12873639.article-detail.7.36a12378pktZlZ)
 > - 进度：
