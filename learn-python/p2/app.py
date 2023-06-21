@@ -21,3 +21,6 @@ print(course_name[0:3])
 print(course_name[0:])
 print(course_name[:3])
 print(course_name[:])
+
+course = "Python \"Programming"
+print(course)
