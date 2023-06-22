@@ -7,3 +7,7 @@ elif temperature > 20:
 else:
     print("It's cold")
 print("Done")
+
+age = 22
+message = "Eligible" if age >= 18 else "Not eligible"
+print(message)
