@@ -13,3 +13,8 @@
 ```
 git config --global https.proxy http://127.0.0.1:7890
 ```
+
+- 下载使用国内源
+```
+pip install -r requirments -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
