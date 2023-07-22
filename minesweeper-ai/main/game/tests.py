@@ -36,7 +36,7 @@ class TestGame:
     def run_all_tests(self):
         self.test_place_mines()
         self.test_update_numbers()
-        self.test_uncover
+        # self.test_uncover
 
 
 def run_tests():

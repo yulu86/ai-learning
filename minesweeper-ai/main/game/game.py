@@ -25,6 +25,9 @@ class Game:
         self.images["flag"] = pygame.image.load(
             "images/flag.png").convert_alpha()
 
+        self.reset()
+
+    def reset(self):
         # 创建雷区
         self.board = [[{"value": 0, "state": CELL_COVERED}
                        for y in range(BOARD_HEIGHT)] for x in range(BOARD_WIDTH)]
@@ -146,6 +149,11 @@ class Game:
             text = font.render("Game Over", True, RED)
             self.screen.blit(text, (SCREEN_WIDTH // 2 - text.get_width() //
                              2, SCREEN_HEIGHT // 2 - text.get_height() // 2))
+
+            retry_button_text = "RETRY"
+            self.draw_button_text(
+                retry_button_text, (SCREEN_WIDTH // 2 - retry_button_text.get_width() // 2,
+                                    SCREEN_HEIGHT * 3 // 2))
 
         # 绘制网格线
         for x in range(BOARD_WIDTH + 1):
