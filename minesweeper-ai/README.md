@@ -26,10 +26,16 @@ conda activate MineSweeper
 conda install pytorch::pytorch torchvision torchaudio -c pytorch
 ```
 
-#### 安装依赖
+### 测试GPU
 
 ```bash
-python -m pip install -r requirements.txt
+python3 utils/check_gpu_status_mps.py
+```
+
+### 安装依赖
+
+```bash
+python3 -m pip install -r requirements.txt
 ```
 
 ### 运行
@@ -38,5 +44,5 @@ python -m pip install -r requirements.txt
 
 ```bash
 cd main/game
-python game.py
+python3 game.py
 ```
