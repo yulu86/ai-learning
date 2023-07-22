@@ -150,11 +150,6 @@ class Game:
             self.screen.blit(text, (SCREEN_WIDTH // 2 - text.get_width() //
                              2, SCREEN_HEIGHT // 2 - text.get_height() // 2))
 
-            retry_button_text = "RETRY"
-            self.draw_button_text(
-                retry_button_text, (SCREEN_WIDTH // 2 - retry_button_text.get_width() // 2,
-                                    SCREEN_HEIGHT * 3 // 2))
-
         # 绘制网格线
         for x in range(BOARD_WIDTH + 1):
             pygame.draw.line(self.screen, BLACK, (x * CELL_SIZE,
