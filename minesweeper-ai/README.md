@@ -36,5 +36,6 @@ python -m pip install -r requirements.txt
 #### 运行游戏
 
 ```bash
-python main/mine_sweeper.py
+cd main/game
+python game.py
 ```
