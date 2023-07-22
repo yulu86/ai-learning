@@ -43,6 +43,6 @@ python3 -m pip install -r requirements.txt
 #### 运行游戏
 
 ```bash
-cd main/game
+cd main
 python3 game.py
 ```
