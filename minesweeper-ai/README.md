@@ -12,7 +12,7 @@ conda create -n MineSweeper python=3.10
 conda activate MineSweeper
 ```
 
-> 参考: [](https://pytorch.org/get-started/locally/)
+> 参考: [Pytorch | Get Started](https://pytorch.org/get-started/locally/)
 
 #### - Windows
 
@@ -23,6 +23,7 @@ conda activate MineSweeper
 #### - Mac
 
 ```bash
+conda install pytorch::pytorch torchvision torchaudio -c pytorch
 ```
 
 #### 安装依赖
