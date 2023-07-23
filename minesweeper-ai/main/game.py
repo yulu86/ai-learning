@@ -58,6 +58,9 @@ class Game:
         self.game_over = False
         self.game_won = False
 
+    def is_finished(self):
+        return self.game_over and self.game_won
+
     def load_images(self):
         self.images = {}
         self.images["covered"] = pygame.image.load(
@@ -78,7 +81,7 @@ class Game:
                     pygame.quit()
                     return
 
-                if event.type == pygame.MOUSEBUTTONDOWN and not self.game_over:
+                if event.type == pygame.MOUSEBUTTONDOWN and not self.is_finished():
                     # 处理鼠标按下事件
                     x, y = event.pos
                     x = x // CELL_SIZE
