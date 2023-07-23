@@ -5,6 +5,15 @@ class Point:
         self.x = x
         self.y = y
 
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y
+
+    def __gt__(self, other):
+        return self.x > other.x and self.y > other.y
+
+    def __str__(self):
+        return f"Point ({self.x}, {self.y})"
+
     # 静态工厂方法
     @classmethod
     def zero(cls):
@@ -14,15 +23,9 @@ class Point:
         print(f"Point ({self.x}, {self.y})")
 
 
-Point.default_color = "yellow"
+point = Point(3, 4)
+other = Point(1, 2)
 
-point = Point(1, 2)
-print(point.default_color)
-print(Point.default_color)
-point.draw()
-
-another = Point(3, 4)
-another.draw()
-
-zeroPoint = Point.zero()
-zeroPoint.draw()
+print(point)
+print(point > other)
+print(point < other)
