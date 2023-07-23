@@ -137,6 +137,7 @@ class Game:
             # 点到地雷，游戏结束
             self.game_over = True
             self.board[x][y]["state"] = CELL_UNCOVERED
+            return
         elif self.board[x][y]["state"] == CELL_COVERED:
             # 翻开方格并显示数字
             self.board[x][y]["state"] = CELL_UNCOVERED
@@ -147,6 +148,18 @@ class Game:
                         if x + dx < 0 or x + dx >= BOARD_WIDTH or y + dy < 0 or y + dy >= BOARD_HEIGHT:
                             continue
                         self.uncover_cell(x + dx, y + dy)
+
+        # 判断是否游戏胜利
+        if self.check_game_won():
+            self.game_won = True
+
+    def check_game_won(self):
+        num_uncovered = 0
+        for x in range(BOARD_WIDTH):
+            for y in range(BOARD_HEIGHT):
+                if self.board[x][y]["state"] == CELL_UNCOVERED:
+                    num_uncovered += 1
+        return num_uncovered == BOARD_WIDTH * BOARD_HEIGHT - NUM_MINES
 
     def draw(self):
         # 绘制游戏界面
@@ -176,11 +189,19 @@ class Game:
                     self.screen.blit(
                         self.images["flag"], (x * CELL_SIZE, y * CELL_SIZE))
 
+        # 绘制游戏失败的提示
         if self.game_over:
             font = pygame.font.Font(None, SCREEN_HEIGHT // 10)
             text = font.render("Game Over", True, RED)
             self.screen.blit(text, (SCREEN_WIDTH // 2 - text.get_width() //
                              2, SCREEN_HEIGHT // 2 - text.get_height() // 2))
+        # 绘制游戏胜利的提示
+        elif self.game_won:
+            font = pygame.font.Font(None, SCREEN_HEIGHT // 10)
+            text = font.render("You Win!", True, GREEN)
+            text_rect = text.get_rect()
+            text_rect.center = (SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
+            self.screen.blit(text, text_rect)
 
         # 绘制网格线
         for x in range(BOARD_WIDTH + 1):
