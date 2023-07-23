@@ -39,15 +39,7 @@ class Game:
         pygame.display.set_caption("扫雷游戏")
 
         # 加载图像
-        self.images = {}
-        self.images["covered"] = pygame.image.load(
-            "images/covered.png").convert_alpha()
-        self.images["uncovered"] = pygame.image.load(
-            "images/uncovered.png").convert_alpha()
-        self.images["mine"] = pygame.image.load(
-            "images/mine.png").convert_alpha()
-        self.images["flag"] = pygame.image.load(
-            "images/flag.png").convert_alpha()
+        self.load_images()
 
         self.reset()
 
@@ -64,6 +56,18 @@ class Game:
 
         # 设置游戏状态
         self.game_over = False
+        self.game_won = False
+
+    def load_images(self):
+        self.images = {}
+        self.images["covered"] = pygame.image.load(
+            "images/covered.png").convert_alpha()
+        self.images["uncovered"] = pygame.image.load(
+            "images/uncovered.png").convert_alpha()
+        self.images["mine"] = pygame.image.load(
+            "images/mine.png").convert_alpha()
+        self.images["flag"] = pygame.image.load(
+            "images/flag.png").convert_alpha()
 
     def run(self):
         while True:
