@@ -93,17 +93,20 @@ class Game:
                             if self.board[x][y]["value"] == -1:
                                 self.game_over = True
                     elif event.button == 3:
-                        # 右键按下
-                        if self.board[x][y]["state"] == CELL_COVERED:
-                            self.board[x][y]["state"] = CELL_FLAGGED
-                        elif self.board[x][y]["state"] == CELL_FLAGGED:
-                            self.board[x][y]["state"] = CELL_COVERED
+                        # 右键按下，切换旗子标注
+                        self.toggle_flag(x, y)
 
             # 绘制游戏界面
             self.draw()
 
             # 更新游戏界面
             pygame.display.update()
+
+    def toggle_flag(self, x, y):
+        if self.board[x][y]["state"] == CELL_COVERED:
+            self.board[x][y]["state"] = CELL_FLAGGED
+        elif self.board[x][y]["state"] == CELL_FLAGGED:
+            self.board[x][y]["state"] = CELL_COVERED
 
     def place_mines(self):
         # 随机布置地雷
