@@ -90,8 +90,6 @@ class Game:
                         # 左键按下
                         if self.board[x][y]["state"] == CELL_COVERED:
                             self.uncover_cell(x, y)
-                            if self.board[x][y]["value"] == -1:
-                                self.game_over = True
                     elif event.button == 3:
                         # 右键按下，切换旗子标注
                         self.toggle_flag(x, y)
