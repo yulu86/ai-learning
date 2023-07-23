@@ -8,7 +8,7 @@
 
 ```bash
 # 创建conda环境
-conda create -n      python=3.10
+conda create -n LearnGym python=3.10
 conda activate LearnGym
 ```
 
