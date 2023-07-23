@@ -1,29 +1,28 @@
 class TagCloud:
     def __init__(self):
-        self.tags = {}
+        self.__tags = {}
 
     def add(self, tag):
         nonsensitiveTag = tag.lower()
-        self.tags[nonsensitiveTag] = self.tags.get(nonsensitiveTag, 0) + 1
+        self.__tags[nonsensitiveTag] = self.__tags.get(nonsensitiveTag, 0) + 1
 
     def __getitem__(self, tag):
-        return self.tags.get(tag.lower())
+        return self.__tags.get(tag.lower())
 
     def __setitem__(self, tag, count):
-        self.tags[tag.lower()] = count
+        self.__tags[tag.lower()] = count
 
     def __len__(self):
-        return len(self.tags)
+        return len(self.__tags)
 
     def __iter__(self):
-        return iter(self.tags)
+        return iter(self.__tags)
 
 
 cloud = TagCloud()
 cloud.add("Python")
 cloud.add("python")
 cloud.add("python")
-print(cloud.tags)
 
 print(cloud["python"])
 cloud["python"] = 10
