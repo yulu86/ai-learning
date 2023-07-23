@@ -5,6 +5,11 @@ class Point:
         self.x = x
         self.y = y
 
+    # 静态工厂方法
+    @classmethod
+    def zero(cls):
+        return cls(0, 0)
+
     def draw(self):
         print(f"Point ({self.x}, {self.y})")
 
@@ -18,3 +23,6 @@ point.draw()
 
 another = Point(3, 4)
 another.draw()
+
+zeroPoint = Point.zero()
+zeroPoint.draw()
