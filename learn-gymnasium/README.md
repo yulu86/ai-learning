@@ -2,14 +2,16 @@
 
 本项目包含`OpenAI Gymnasium`学习。
 
+> 参考: [Gymnasium Documentation](https://gymnasium.farama.org/index.html)
+
 ## 运行指南
 
 ### 环境配置
 
 ```bash
 # 创建conda环境
-conda create -n LearnGym python=3.10
-conda activate LearnGym
+conda create -n learn-gym python=3.10.8
+conda activate learn-gym
 ```
 
 ### 安装 `pytorch`
@@ -26,6 +28,12 @@ conda install pytorch=2.0.0 torchvision pytorch-cuda=11.8 -c pytorch -c nvidia
 
 ```bash
 conda install pytorch::pytorch torchvision torchaudio -c pytorch
+```
+
+### 安装swig
+
+```
+conda install swig
 ```
 
 ### 测试GPU
