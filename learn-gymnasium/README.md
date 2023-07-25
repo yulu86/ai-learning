@@ -10,7 +10,7 @@
 
 ```bash
 # 创建conda环境
-conda create -n learn-gym python=3.10.8
+conda create -n learn-gym python=3.8.16
 conda activate learn-gym
 ```
 
@@ -30,12 +30,6 @@ conda install pytorch=2.0.0 torchvision pytorch-cuda=11.8 -c pytorch -c nvidia
 conda install pytorch::pytorch torchvision torchaudio -c pytorch
 ```
 
-### 安装swig
-
-```
-conda install swig
-```
-
 ### 测试GPU
 
 - #### Windows
@@ -53,5 +47,9 @@ python3 utils/check_gpu_status_mps.py
 ### 安装依赖
 
 ```bash
-python3 -m pip install -r requirements.txt
+# 安装swig
+conda install swig
+
+# 安装依赖
+python -m pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
