@@ -3,3 +3,6 @@ datasets/*.csv
 
 # 模型
 models/*.joblib
+
+# 模型可视化
+logs/*.dot
