@@ -1,1 +1,5 @@
-datasets/
+# 数据集
+datasets/*.csv
+
+# 模型
+models/*.joblib
