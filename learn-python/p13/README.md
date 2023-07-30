@@ -1,5 +1,7 @@
 # Machine learning in action
 
+`jupyter notebook` 使用 | [音乐商店Demo](./README_music_store_demo.md)
+
 ## Steps
 
 1. Import the Data
