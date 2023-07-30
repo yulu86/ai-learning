@@ -24,4 +24,4 @@ jupyter notebook
 
 ### 下载数据集
 
-- 访问 [kaggle.com | Video Game Sales](https://www.kaggle.com/datasets/gregorut/videogamesales)
+- 访问 [music csv](http://bit.ly/music-csv)
