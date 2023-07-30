@@ -25,3 +25,15 @@ jupyter notebook
 ### 下载数据集
 
 - 访问 [music csv](http://bit.ly/music-csv)
+
+### 使用 `jupyter notebook` 访问 [music_store](./music_store.ipynb)
+
+## 使用代码训练和预测
+
+```bash
+# 训练模型
+python train_music_recommender.py
+
+# 预测
+python predict_music_recommender.py
+```
