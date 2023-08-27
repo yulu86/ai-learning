@@ -1,5 +1,7 @@
 # [微信读书 | 强化学习：原理与Python实现](https://weread.qq.com/web/reader/da832f507192b327da81965?)
 
+> `gymnasium`请[参考](https://gymnasium.farama.org/)
+
 ---
 
 ## 创建环境
