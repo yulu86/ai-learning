@@ -19,6 +19,29 @@ conda activate rl
 
 > 注意：在mac上使用`python3`替换以下命令中的`python`
 
+
+### 安装`PyTorch`
+
+#### Windows:
+
+```bash
+# 使用 GPU 训练需要手动安装完整版 PyTorch
+python -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+# 运行程序脚本测试 PyTorch 是否能成功调用 GPU
+python .\utils\check_gpu_status.py
+```
+
+#### macOS (Apple Silicon):
+
+```bash
+# 使用 GPU 训练需要手动安装 Apple Silicon 版 PyTorch
+conda install pytorch::pytorch=2.0.1 torchvision torchaudio -c pytorch
+
+# 运行程序脚本测试 PyTorch 是否能成功调用 GPU
+python utils/check_gpu_status_mps.py
+```
+
 ### 安装依赖
 
 ```sh
