@@ -4,6 +4,7 @@
 
 - [强化学习圣经 | Reinforcement Learning：An introduction 第二版](http://incompleteideas.net/book/RLbook2020.pdf)
 - [gymnasium](https://gymnasium.farama.org/)
+- [微信读书 | 深度强化学习算法与实践:基于PyTorch的实现](https://weread.qq.com/web/reader/1db32480813ab6d74g012a53?)
 
 ---
 
