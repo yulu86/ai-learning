@@ -1,0 +1,4 @@
+pygame==2.5.1
+numpy==1.25.1
+gymnasium==0.29.1
+jupyter==1.0.0
